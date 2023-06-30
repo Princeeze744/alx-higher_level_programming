@@ -7,4 +7,4 @@ for i in range(10):
             continue
         else:
             print(", {:02d}".format((i * 10) + j), end="")
-print ()
+print()
