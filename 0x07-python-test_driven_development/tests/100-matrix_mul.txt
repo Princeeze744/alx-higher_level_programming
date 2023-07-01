@@ -1,0 +1,29 @@
+==========================================
+100-matrix_mul module
+==========================================
+
+import matrix_mul function
+	>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+
+****************************************************************
+Usage: matrix_mul(mat_a, mat_b), where mat_a and mat_b are
+both list of lists of integers or float.
+****************************************************************
+
+	>>> mat_a = [
+	...		[1, 2],
+	...		[3, 4]
+	...	]
+
+	>>> mat_b = [
+	...		[1, 2],
+	...		[3, 4]
+	...	]
+
+======
+TESTS
+======
+
+	>>> matrix_mul(mat_a, mat_b)
+	[[7, 10], [15, 22]]

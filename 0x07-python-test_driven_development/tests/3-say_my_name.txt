@@ -1,0 +1,38 @@
+=======================
+2-say_my_name
+=======================
+
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>>
+
+Normal use case:
+	>>> say_my_name('Ezekiel', 'Bassey')
+	My name is Ezekiel Bassey
+
+One argument:
+	>>> say_my_name('Ezekiel')
+	My name is Ezekiel 
+
+first_name is int and last_name is string:
+	>>> say_my_name(98, 'Bassey')
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+first_name is string and last_name is int:
+	>>> say_my_name('Ezekiel', 404)
+	Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+No argument:
+	>>> say_my_name()
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Excess arguments:
+	>>> say_my_name("Ezekiel", "Bassey", "one_other")
+	Traceback (most recent call last):
+	...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
