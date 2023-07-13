@@ -15,5 +15,5 @@ class Student():
         """Returns dict representation of the class"""
         if attrs is not None:
             return {key: val for key, val in self.__dict__.items()
-                    if attr in attrs}
+                    if key in attrs}
         return self.__dict__
