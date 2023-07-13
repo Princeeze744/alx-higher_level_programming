@@ -15,11 +15,6 @@ try:
 except Exception as e:
     pass
 
-# if len(argv) > 1:
-    # for i, arg in enumerate(argv):
-        # if i < 1:
-            # continue
-        # items.append(arg)
 if len(argv) > 1:
     for arg in argv:
         if arg != argv[0]:
