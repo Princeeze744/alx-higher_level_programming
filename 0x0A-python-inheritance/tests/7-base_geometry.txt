@@ -1,0 +1,76 @@
+=======================
+Test BaseGeometry class
+=======================
+
+
+import BaseGeometry and instantiate:
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> base_geometry = BaseGeometry()
+
+test area public instance method:
+	>>> base_geometry.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+test integer_validator public instance method:
+	>>> base_geometry.integer_validator('age', 98)
+	>>>
+
+	>>> base_geometry.integer_validator('name', 'Ezekiel')
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+	>>> base_geometry.integer_validator('value', True)
+	Traceback (most recent call last):
+	...
+	TypeError: value must be an integer
+
+	>>> base_geometry.integer_validator('num', [4])
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+	>>> base_geometry.integer_validator('num', (9,))
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+	>>> base_geometry.integer_validator('num', None)
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+	>>> base_geometry.integer_validator('num', {2, 4})
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+	>>> base_geometry.integer_validator('num', True)
+	Traceback (most recent call last):
+	...
+	TypeError: num must be an integer
+
+test integer_validator with value <= 0:
+	>>> base_geometry.integer_validator('value', -1)
+	Traceback (most recent call last):
+	...
+	ValueError: value must be greater than 0
+
+	>>> base_geometry.integer_validator('num', 0)
+	Traceback (most recent call last):
+	...
+	ValueError: num must be greater than 0
+
+test integer_validator with only 1 argument:
+	>>> base_geometry.integer_validator(98)
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+test integer_validator with no argument:
+	>>> base_geometry.integer_validator()
+	Traceback (most recent call last):
+	...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
