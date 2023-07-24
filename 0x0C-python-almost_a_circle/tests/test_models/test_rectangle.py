@@ -5,9 +5,10 @@ import sys
 from io import StringIO
 from models.rectangle import Rectangle
 from models.base import Base
+from tests.test_models.test_base import TestBase
 
 
-class TestRectangle(unittest.TestCase):
+class TestRectangle(TestBase):
     """Rectangle test class"""
 
     def setUp(self):

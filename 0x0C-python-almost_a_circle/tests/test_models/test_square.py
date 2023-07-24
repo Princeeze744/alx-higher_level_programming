@@ -6,9 +6,10 @@ from io import StringIO
 from models.square import Square
 from models.rectangle import Rectangle
 from models.base import Base
+from tests.test_models.test_base import TestBase
 
 
-class TestSquare(unittest.TestCase):
+class TestSquare(TestBase):
     """Square test class"""
 
     def setUp(self):
